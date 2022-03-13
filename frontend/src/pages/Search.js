@@ -112,10 +112,12 @@ function Search() {
                 name="sort"
                 onChange={(e) => {
                   setSort(e.target.value);
+                  handleSearchSubmit(searchValue, e.target.value, e);
                 }}
               >
-                <option value="score_asc">평점 높은 순</option>
-                <option value="score_desc">평점 낮은 순</option>
+                <option value="">정렬 순</option>
+                <option value="score_desc">평점 높은 순</option>
+                <option value="score_asc">평점 낮은 순</option>
                 <option value="review_more">리뷰 많은 순</option>
                 <option value="review_less">리뷰 적은 순</option>
                 <option value="dict_asc">가나다 순</option>
